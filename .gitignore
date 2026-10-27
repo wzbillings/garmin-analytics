@@ -25,3 +25,5 @@ data/derived/
 # Quarto
 .quarto/
 reports/*.html
+reports/*_files/
+
