@@ -1,0 +1,32 @@
+---
+title: "Garmin Recovery Analysis"
+format:
+  html:
+    toc: true
+execute:
+  warning: false
+  message: false
+---
+
+## Imported Garmin Data
+
+```{r}
+library(targets)
+
+daily <- tar_read(daily_data)
+
+str(daily, max.level = 2)
+```
+
+## Available Measurements
+
+```{r}
+library(tibble)
+
+tibble(
+  date = daily$date,
+  sleep_available = !is.null(daily$sleep),
+  stress_available = !is.null(daily$stress),
+  body_battery_available = !is.null(daily$body_battery)
+)
+```

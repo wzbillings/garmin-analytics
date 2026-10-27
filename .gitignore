@@ -1,0 +1,27 @@
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python environment
+.venv/
+__pycache__/
+
+# R environment
+renv/library/
+renv/staging/
+
+# Targets
+_targets/
+
+# Sensitive data
+data/raw/
+data/derived/
+.Renviron
+.env
+.env.*
+
+# Quarto
+.quarto/
+reports/*.html
